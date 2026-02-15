@@ -1,6 +1,6 @@
 ================================================================================
   PERSONAL PORTFOLIO WEBSITE - COMPONENT DOCUMENTATION
-  Theme: Personal Portfolio (Alex Morgan)
+  Theme: Personal Portfolio (MavScript.blu / Blue)
   Built with: Bootstrap 5.3.2 + jQuery 3.7.1
   AI Assistance: Generated with Claude (Anthropic) for HTML structure,
                  Bootstrap integration, and jQuery components.
@@ -11,27 +11,36 @@ BOOTSTRAP COMPONENTS USED (8 total)
 ================================================================================
 
 1. NAVBAR (Bootstrap Component)
-   - File: index.html (line ~17)
+   - File: index.html (line ~22)
    - Responsive navigation bar with collapsible toggler for mobile
    - Uses navbar-expand-lg for responsive breakpoint
    - Fixed-top positioning with scroll-aware styling
-   - Includes brand logo and 6 navigation links
+   - Includes MavScript.blu brand logo and 6 navigation links
    - Bootstrap classes: navbar, navbar-expand-lg, navbar-dark, fixed-top,
      navbar-toggler, collapse, navbar-collapse, nav-item, nav-link
 
 2. CAROUSEL (Bootstrap Component)
-   - File: index.html (line ~37)
+   - File: index.html (line ~47)
    - Full-screen hero carousel with 3 slides and fade transition
    - Auto-plays with 5-second interval
    - Includes carousel indicators and prev/next controls
    - Each slide has a unique gradient background and call-to-action button
+   - Slide 1: "Hi, I'm Blue" intro
+   - Slide 2: "I Build Full-Stack Apps"
+   - Slide 3: "Let's Work Together"
    - Bootstrap classes: carousel, carousel-fade, carousel-indicators,
      carousel-inner, carousel-item, carousel-control-prev/next
 
 3. CARDS (Bootstrap Component)
    - File: index.html (Portfolio section)
-   - 6 project cards displayed in a responsive grid
-   - Each card includes image placeholder, title, description, tech badges,
+   - 6 project cards displaying real GitHub projects:
+     1) PixelBoof - AI photo booth (Full-Stack)
+     2) WTWR (What to Wear) - Weather clothing app (Full-Stack)
+     3) DnD-space - D&D companion app (Full-Stack)
+     4) Twitch Overlays - Streamer overlays (Frontend)
+     5) Spots - Location sharing app (Frontend)
+     6) GolfScorer - Python CLI scoring tool (Tools)
+   - Each card includes icon placeholder, title, description, tech badges,
      and a button to open the project modal
    - Bootstrap classes: card, card-body, card-title, card-text,
      card-footer, card-img-top, h-100
@@ -39,7 +48,8 @@ BOOTSTRAP COMPONENTS USED (8 total)
 4. MODAL (Bootstrap Component)
    - File: index.html (6 modals after portfolio section)
    - 6 project detail modals triggered by "View Details" buttons
-   - Each modal shows project overview, key features, and technologies
+   - Each modal shows project overview, key features, technologies,
+     and links to the real GitHub repos and live demos
    - Centered and large-sized modals with dark theme styling
    - Bootstrap classes: modal, modal-dialog, modal-lg, modal-dialog-centered,
      modal-content, modal-header, modal-body, modal-footer
@@ -47,6 +57,9 @@ BOOTSTRAP COMPONENTS USED (8 total)
 5. ACCORDION (Bootstrap Component)
    - File: index.html (About section)
    - 3-panel accordion for Experience, Education, and Interests
+   - Experience: Freelance Web Dev + Student Software Engineer
+   - Education: Software Engineering Student
+   - Interests: Creative coding, AI, D&D, Twitch, open-source
    - First panel expanded by default, others collapsed
    - Uses data-bs-parent for exclusive panel behavior
    - Bootstrap classes: accordion, accordion-item, accordion-header,
@@ -54,14 +67,19 @@ BOOTSTRAP COMPONENTS USED (8 total)
 
 6. PROGRESS BARS (Bootstrap Component)
    - File: index.html (Skills section)
-   - 6 progress bars showing proficiency in different technologies
+   - 6 progress bars showing proficiency in:
+     HTML/CSS/SCSS (90%), JavaScript/TypeScript (85%), React (80%),
+     Node.js/Express (75%), Python (70%), Bootstrap/jQuery (85%)
    - Animated with jQuery on scroll (starts at 0%, fills to target)
    - Bootstrap classes: progress, progress-bar
 
 7. BADGES (Bootstrap Component)
    - File: index.html (Skills section + Portfolio cards)
    - Used in two contexts:
-     a) Tech Stack section: 22 badges showing all technologies
+     a) Tech Stack section: 16 badges showing actual technologies
+        (HTML5, CSS3, SCSS, JavaScript, TypeScript, React, Node.js,
+         Express, Python, Bootstrap, jQuery, Git, Vercel, Google Cloud,
+         REST APIs, Responsive Design)
      b) Portfolio cards: category badges and technology tags
    - Bootstrap classes: badge, bg-accent-soft (custom), bg-dark
 
@@ -101,6 +119,7 @@ JQUERY COMPONENTS USED (4 total)
 3. ANIMATED COUNTERS (jQuery Component)
    - File: js/custom.js (line ~138)
    - Counts up from 0 to target numbers in the stats section
+   - Stats: 47 GitHub Repos, 6 Languages, 8 Live Apps, 1000 Cups of Coffee
    - Uses requestAnimationFrame for smooth 2-second animation
    - Cubic ease-out easing for natural deceleration
    - Triggers once when the stats section scrolls into view
@@ -109,7 +128,7 @@ JQUERY COMPONENTS USED (4 total)
 
 4. PORTFOLIO FILTERING (jQuery Component)
    - File: js/custom.js (line ~183)
-   - Filter buttons (All, Web Apps, Mobile, Design) toggle project visibility
+   - Filter buttons (All, Full-Stack, Frontend, Tools) toggle project visibility
    - Clicking a filter hides non-matching cards with CSS transitions
    - Active button state management
    - jQuery methods: .on('click'), .data(), .removeClass(), .addClass(),
@@ -128,6 +147,8 @@ ADDITIONAL FEATURES
 - Back-to-top button with scroll-aware visibility
 - Animated progress bars triggered on scroll
 - Bootstrap ScrollSpy for active nav link tracking
+- Real GitHub project links and live demo URLs
+- Contact section with website (mavscript.blue) and GitHub links
 
 
 FILE STRUCTURE
@@ -141,7 +162,7 @@ CADProfileBlu/
 │   └── custom.js           jQuery components and interactions
 ├── images/                 Image assets directory (placeholder)
 ├── COMPONENTS.txt          This documentation file
-└── README.md               (if applicable)
+└── README.md               Project overview and setup instructions
 
 External CDN Resources:
 - Bootstrap 5.3.2 CSS & JS Bundle
