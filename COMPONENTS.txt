@@ -1,0 +1,150 @@
+================================================================================
+  PERSONAL PORTFOLIO WEBSITE - COMPONENT DOCUMENTATION
+  Theme: Personal Portfolio (Alex Morgan)
+  Built with: Bootstrap 5.3.2 + jQuery 3.7.1
+  AI Assistance: Generated with Claude (Anthropic) for HTML structure,
+                 Bootstrap integration, and jQuery components.
+================================================================================
+
+
+BOOTSTRAP COMPONENTS USED (8 total)
+================================================================================
+
+1. NAVBAR (Bootstrap Component)
+   - File: index.html (line ~17)
+   - Responsive navigation bar with collapsible toggler for mobile
+   - Uses navbar-expand-lg for responsive breakpoint
+   - Fixed-top positioning with scroll-aware styling
+   - Includes brand logo and 6 navigation links
+   - Bootstrap classes: navbar, navbar-expand-lg, navbar-dark, fixed-top,
+     navbar-toggler, collapse, navbar-collapse, nav-item, nav-link
+
+2. CAROUSEL (Bootstrap Component)
+   - File: index.html (line ~37)
+   - Full-screen hero carousel with 3 slides and fade transition
+   - Auto-plays with 5-second interval
+   - Includes carousel indicators and prev/next controls
+   - Each slide has a unique gradient background and call-to-action button
+   - Bootstrap classes: carousel, carousel-fade, carousel-indicators,
+     carousel-inner, carousel-item, carousel-control-prev/next
+
+3. CARDS (Bootstrap Component)
+   - File: index.html (Portfolio section)
+   - 6 project cards displayed in a responsive grid
+   - Each card includes image placeholder, title, description, tech badges,
+     and a button to open the project modal
+   - Bootstrap classes: card, card-body, card-title, card-text,
+     card-footer, card-img-top, h-100
+
+4. MODAL (Bootstrap Component)
+   - File: index.html (6 modals after portfolio section)
+   - 6 project detail modals triggered by "View Details" buttons
+   - Each modal shows project overview, key features, and technologies
+   - Centered and large-sized modals with dark theme styling
+   - Bootstrap classes: modal, modal-dialog, modal-lg, modal-dialog-centered,
+     modal-content, modal-header, modal-body, modal-footer
+
+5. ACCORDION (Bootstrap Component)
+   - File: index.html (About section)
+   - 3-panel accordion for Experience, Education, and Interests
+   - First panel expanded by default, others collapsed
+   - Uses data-bs-parent for exclusive panel behavior
+   - Bootstrap classes: accordion, accordion-item, accordion-header,
+     accordion-button, accordion-collapse, accordion-body
+
+6. PROGRESS BARS (Bootstrap Component)
+   - File: index.html (Skills section)
+   - 6 progress bars showing proficiency in different technologies
+   - Animated with jQuery on scroll (starts at 0%, fills to target)
+   - Bootstrap classes: progress, progress-bar
+
+7. BADGES (Bootstrap Component)
+   - File: index.html (Skills section + Portfolio cards)
+   - Used in two contexts:
+     a) Tech Stack section: 22 badges showing all technologies
+     b) Portfolio cards: category badges and technology tags
+   - Bootstrap classes: badge, bg-accent-soft (custom), bg-dark
+
+8. FORMS (Bootstrap Component)
+   - File: index.html (Contact section)
+   - Contact form with 4 fields: Name, Email, Subject, Message
+   - Uses Bootstrap form classes and validation feedback
+   - Includes success alert on valid submission
+   - Bootstrap classes: form-control, form-label, invalid-feedback,
+     alert, alert-success
+
+
+JQUERY COMPONENTS USED (4 total)
+================================================================================
+
+1. ANIMATED SCROLL EFFECTS (jQuery Component)
+   - File: js/custom.js (line ~15)
+   - Elements with class "fade-in" animate into view as user scrolls
+   - Uses jQuery's .offset(), .scrollTop(), and class toggling
+   - Also handles: navbar style change on scroll, back-to-top button
+     visibility, smooth scrolling for all anchor links, and active
+     nav link highlighting based on scroll position
+   - jQuery methods: $(window).on('scroll'), .offset(), .scrollTop(),
+     .addClass(), .removeClass(), .animate(), .hasClass()
+
+2. FORM VALIDATION (jQuery Component)
+   - File: js/custom.js (line ~85)
+   - Custom client-side validation for the contact form
+   - Validates: name (min 2 chars), email (regex), subject (min 2 chars),
+     message (min 10 chars)
+   - Shows Bootstrap is-invalid/is-valid classes per field
+   - Displays success alert with fade animation, auto-hides after 5s
+   - Live validation clears errors on input
+   - jQuery methods: .on('submit'), .val(), .trim(), .addClass(),
+     .removeClass(), .fadeIn(), .fadeOut(), .hide(), .text()
+
+3. ANIMATED COUNTERS (jQuery Component)
+   - File: js/custom.js (line ~138)
+   - Counts up from 0 to target numbers in the stats section
+   - Uses requestAnimationFrame for smooth 2-second animation
+   - Cubic ease-out easing for natural deceleration
+   - Triggers once when the stats section scrolls into view
+   - Formats numbers with toLocaleString() for commas
+   - jQuery methods: .each(), .data(), .text(), .offset(), .scrollTop()
+
+4. PORTFOLIO FILTERING (jQuery Component)
+   - File: js/custom.js (line ~183)
+   - Filter buttons (All, Web Apps, Mobile, Design) toggle project visibility
+   - Clicking a filter hides non-matching cards with CSS transitions
+   - Active button state management
+   - jQuery methods: .on('click'), .data(), .removeClass(), .addClass(),
+     .each(), .css()
+
+
+ADDITIONAL FEATURES
+================================================================================
+
+- Fully responsive design (mobile-first with Bootstrap grid)
+- Dark theme with cyan/teal accent color (#00d4aa)
+- CSS custom properties for consistent theming
+- Google Fonts integration (Inter + Playfair Display)
+- Bootstrap Icons for all iconography
+- Smooth scroll behavior
+- Back-to-top button with scroll-aware visibility
+- Animated progress bars triggered on scroll
+- Bootstrap ScrollSpy for active nav link tracking
+
+
+FILE STRUCTURE
+================================================================================
+
+CADProfileBlu/
+├── index.html              Main HTML page
+├── css/
+│   └── custom.css          Custom styles (dark theme, components, responsive)
+├── js/
+│   └── custom.js           jQuery components and interactions
+├── images/                 Image assets directory (placeholder)
+├── COMPONENTS.txt          This documentation file
+└── README.md               (if applicable)
+
+External CDN Resources:
+- Bootstrap 5.3.2 CSS & JS Bundle
+- Bootstrap Icons 1.11.3
+- jQuery 3.7.1
+- Google Fonts (Inter, Playfair Display)

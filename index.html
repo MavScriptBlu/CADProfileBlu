@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan | Personal Portfolio</title>
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+  <!-- ============================================================
+       BOOTSTRAP COMPONENT 1: Navbar (responsive with toggler)
+       ============================================================ -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <span class="text-accent">&lt;</span>Alex Morgan<span class="text-accent"> /&gt;</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       BOOTSTRAP COMPONENT 2: Carousel (hero section)
+       ============================================================ -->
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-slide slide-1">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+              <h1 class="display-3 fw-bold">Hi, I'm <span class="text-accent">Alex Morgan</span></h1>
+              <p class="lead">Full-Stack Developer &amp; UI/UX Designer</p>
+              <a href="#portfolio" class="btn btn-accent btn-lg mt-3">View My Work</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-slide slide-2">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+              <h1 class="display-3 fw-bold">I Build <span class="text-accent">Web Experiences</span></h1>
+              <p class="lead">Clean code. Elegant design. Seamless performance.</p>
+              <a href="#skills" class="btn btn-accent btn-lg mt-3">See My Skills</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-slide slide-3">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+              <h1 class="display-3 fw-bold">Let's <span class="text-accent">Work Together</span></h1>
+              <p class="lead">Turning ideas into reality, one project at a time.</p>
+              <a href="#contact" class="btn btn-accent btn-lg mt-3">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       About Section with BOOTSTRAP COMPONENT 5: Accordion
+       ============================================================ -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0 text-center fade-in">
+          <div class="about-img-wrapper">
+            <div class="about-placeholder-img">
+              <i class="bi bi-person-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 fade-in">
+          <h6 class="text-accent text-uppercase fw-semibold ls-wide">About Me</h6>
+          <h2 class="section-heading">Passionate Developer<br>Based in San Francisco</h2>
+          <p class="text-muted mb-4">
+            I'm a full-stack developer with 5+ years of experience building modern web applications.
+            I love crafting clean, efficient code and creating intuitive user interfaces that delight users.
+            When I'm not coding, you'll find me hiking, reading, or experimenting with new tech.
+          </p>
+
+          <!-- BOOTSTRAP COMPONENT 5: Accordion -->
+          <div class="accordion" id="aboutAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExperience" aria-expanded="true" aria-controls="collapseExperience">
+                  <i class="bi bi-briefcase me-2 text-accent"></i> Experience
+                </button>
+              </h2>
+              <div id="collapseExperience" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  <strong>Senior Developer at TechCorp (2022 - Present)</strong><br>
+                  Leading frontend architecture and mentoring junior developers.<br><br>
+                  <strong>Web Developer at StartupXYZ (2019 - 2022)</strong><br>
+                  Built and maintained 15+ client-facing web applications.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEducation" aria-expanded="false" aria-controls="collapseEducation">
+                  <i class="bi bi-mortarboard me-2 text-accent"></i> Education
+                </button>
+              </h2>
+              <div id="collapseEducation" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  <strong>B.S. Computer Science</strong> &mdash; UC Berkeley, 2019<br>
+                  Focused on Human-Computer Interaction and Software Engineering.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInterests" aria-expanded="false" aria-controls="collapseInterests">
+                  <i class="bi bi-heart me-2 text-accent"></i> Interests
+                </button>
+              </h2>
+              <div id="collapseInterests" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  Open-source contributing, UI/UX research, rock climbing, sci-fi novels, and specialty coffee.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Skills Section with BOOTSTRAP COMPONENT 6: Progress Bars
+       and BOOTSTRAP COMPONENT 7: Badges
+       ============================================================ -->
+  <section id="skills" class="py-5 bg-dark-alt">
+    <div class="container">
+      <div class="text-center mb-5 fade-in">
+        <h6 class="text-accent text-uppercase fw-semibold ls-wide">What I Do</h6>
+        <h2 class="section-heading text-white">Skills &amp; Technologies</h2>
+      </div>
+      <div class="row">
+        <!-- Progress Bars -->
+        <div class="col-lg-6 mb-4 fade-in">
+          <h5 class="text-white mb-4">Technical Proficiency</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">HTML / CSS / Sass</span>
+              <span class="text-accent">95%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="95"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">JavaScript / TypeScript</span>
+              <span class="text-accent">90%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="90"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">React / Next.js</span>
+              <span class="text-accent">88%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="88"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">Node.js / Express</span>
+              <span class="text-accent">82%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="82"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">Python / Django</span>
+              <span class="text-accent">75%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="75"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-light">UI/UX Design</span>
+              <span class="text-accent">80%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-accent" style="width: 0%" data-target="80"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges / Tech Stack -->
+        <div class="col-lg-6 mb-4 fade-in">
+          <h5 class="text-white mb-4">Tech Stack</h5>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <!-- BOOTSTRAP COMPONENT 7: Badges -->
+            <span class="badge bg-accent-soft">HTML5</span>
+            <span class="badge bg-accent-soft">CSS3</span>
+            <span class="badge bg-accent-soft">Sass</span>
+            <span class="badge bg-accent-soft">JavaScript</span>
+            <span class="badge bg-accent-soft">TypeScript</span>
+            <span class="badge bg-accent-soft">React</span>
+            <span class="badge bg-accent-soft">Next.js</span>
+            <span class="badge bg-accent-soft">Vue.js</span>
+            <span class="badge bg-accent-soft">Node.js</span>
+            <span class="badge bg-accent-soft">Express</span>
+            <span class="badge bg-accent-soft">Python</span>
+            <span class="badge bg-accent-soft">Django</span>
+            <span class="badge bg-accent-soft">PostgreSQL</span>
+            <span class="badge bg-accent-soft">MongoDB</span>
+            <span class="badge bg-accent-soft">Docker</span>
+            <span class="badge bg-accent-soft">AWS</span>
+            <span class="badge bg-accent-soft">Git</span>
+            <span class="badge bg-accent-soft">Figma</span>
+            <span class="badge bg-accent-soft">Bootstrap</span>
+            <span class="badge bg-accent-soft">jQuery</span>
+            <span class="badge bg-accent-soft">REST APIs</span>
+            <span class="badge bg-accent-soft">GraphQL</span>
+          </div>
+          <h5 class="text-white mb-3 mt-4">What I Bring</h5>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="skill-card p-3 rounded">
+                <i class="bi bi-laptop text-accent fs-3"></i>
+                <h6 class="text-white mt-2 mb-1">Frontend Dev</h6>
+                <small class="text-muted">Responsive &amp; performant UIs</small>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="skill-card p-3 rounded">
+                <i class="bi bi-server text-accent fs-3"></i>
+                <h6 class="text-white mt-2 mb-1">Backend Dev</h6>
+                <small class="text-muted">Scalable APIs &amp; services</small>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="skill-card p-3 rounded">
+                <i class="bi bi-palette text-accent fs-3"></i>
+                <h6 class="text-white mt-2 mb-1">UI/UX Design</h6>
+                <small class="text-muted">User-centered design</small>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="skill-card p-3 rounded">
+                <i class="bi bi-phone text-accent fs-3"></i>
+                <h6 class="text-white mt-2 mb-1">Mobile First</h6>
+                <small class="text-muted">Cross-device experiences</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Portfolio Section with BOOTSTRAP COMPONENT 3: Cards
+       and BOOTSTRAP COMPONENT 4: Modal
+       jQuery COMPONENT: Portfolio filtering
+       ============================================================ -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in">
+        <h6 class="text-accent text-uppercase fw-semibold ls-wide">My Work</h6>
+        <h2 class="section-heading">Featured Projects</h2>
+      </div>
+
+      <!-- jQuery Component: Filter Buttons -->
+      <div class="text-center mb-4 fade-in">
+        <div class="btn-group filter-group" role="group" aria-label="Portfolio filters">
+          <button type="button" class="btn btn-outline-accent active" data-filter="all">All</button>
+          <button type="button" class="btn btn-outline-accent" data-filter="web">Web Apps</button>
+          <button type="button" class="btn btn-outline-accent" data-filter="mobile">Mobile</button>
+          <button type="button" class="btn btn-outline-accent" data-filter="design">Design</button>
+        </div>
+      </div>
+
+      <!-- BOOTSTRAP COMPONENT 3: Cards -->
+      <div class="row g-4" id="portfolioGrid">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-1">
+              <i class="bi bi-cart4"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">E-Commerce Platform</h5>
+                <span class="badge bg-accent-soft">Web App</span>
+              </div>
+              <p class="card-text text-muted">A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">React</small>
+                <small class="badge bg-dark">Node.js</small>
+                <small class="badge bg-dark">MongoDB</small>
+                <small class="badge bg-dark">Stripe</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <!-- Triggers Modal (BOOTSTRAP COMPONENT 4) -->
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="mobile">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-2">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">Fitness Tracker App</h5>
+                <span class="badge bg-accent-soft">Mobile</span>
+              </div>
+              <p class="card-text text-muted">Cross-platform mobile app for tracking workouts, nutrition, and health goals with social features.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">React Native</small>
+                <small class="badge bg-dark">Firebase</small>
+                <small class="badge bg-dark">Redux</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="design">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-3">
+              <i class="bi bi-brush"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">Brand Identity System</h5>
+                <span class="badge bg-accent-soft">Design</span>
+              </div>
+              <p class="card-text text-muted">Complete brand identity including logo, color palette, typography, and design system components.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">Figma</small>
+                <small class="badge bg-dark">Illustrator</small>
+                <small class="badge bg-dark">After Effects</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-4">
+              <i class="bi bi-kanban"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">Task Management Tool</h5>
+                <span class="badge bg-accent-soft">Web App</span>
+              </div>
+              <p class="card-text text-muted">Collaborative project management application with drag-and-drop boards, real-time updates, and team chat.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">Vue.js</small>
+                <small class="badge bg-dark">Express</small>
+                <small class="badge bg-dark">Socket.io</small>
+                <small class="badge bg-dark">PostgreSQL</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="mobile">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-5">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">City Explorer</h5>
+                <span class="badge bg-accent-soft">Mobile</span>
+              </div>
+              <p class="card-text text-muted">Location-based travel app featuring curated city guides, AR navigation, and offline map support.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">Flutter</small>
+                <small class="badge bg-dark">Dart</small>
+                <small class="badge bg-dark">Google Maps API</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="design">
+          <div class="card project-card h-100">
+            <div class="card-img-top project-img-placeholder bg-gradient-6">
+              <i class="bi bi-layout-text-window-reverse"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">SaaS Dashboard UI</h5>
+                <span class="badge bg-accent-soft">Design</span>
+              </div>
+              <p class="card-text text-muted">Analytics dashboard design with interactive data visualizations, dark mode, and accessibility compliance.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <small class="badge bg-dark">Figma</small>
+                <small class="badge bg-dark">D3.js</small>
+                <small class="badge bg-dark">Design Systems</small>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button class="btn btn-sm btn-accent" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOTSTRAP COMPONENT 4: Modals (project detail modals)
+       ============================================================ -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal1Label">E-Commerce Platform</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-1 mb-3 rounded">
+            <i class="bi bi-cart4"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A comprehensive e-commerce platform built from scratch featuring product catalog, shopping cart, user authentication, payment integration with Stripe, order tracking, and an admin dashboard for inventory management.</p>
+          <h6 class="text-accent mt-3">Key Features</h6>
+          <ul>
+            <li>Real-time inventory tracking</li>
+            <li>Secure payment processing via Stripe</li>
+            <li>Admin dashboard with sales analytics</li>
+            <li>Responsive design for all devices</li>
+            <li>Search with filters and sorting</li>
+          </ul>
+          <h6 class="text-accent mt-3">Technologies Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">React</span>
+            <span class="badge bg-accent-soft">Node.js</span>
+            <span class="badge bg-accent-soft">MongoDB</span>
+            <span class="badge bg-accent-soft">Stripe API</span>
+            <span class="badge bg-accent-soft">Redux</span>
+            <span class="badge bg-accent-soft">JWT Auth</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-outline-light"><i class="bi bi-github me-1"></i>GitHub</a>
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal2Label">Fitness Tracker App</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-2 mb-3 rounded">
+            <i class="bi bi-phone"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A cross-platform mobile application for tracking fitness routines, nutrition logs, and health goals. Includes social features for workout challenges with friends and community leaderboards.</p>
+          <h6 class="text-accent mt-3">Key Features</h6>
+          <ul>
+            <li>Workout logging with exercise library</li>
+            <li>Nutrition tracking with calorie counter</li>
+            <li>Progress charts and analytics</li>
+            <li>Social challenges and leaderboards</li>
+            <li>Push notification reminders</li>
+          </ul>
+          <h6 class="text-accent mt-3">Technologies Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">React Native</span>
+            <span class="badge bg-accent-soft">Firebase</span>
+            <span class="badge bg-accent-soft">Redux</span>
+            <span class="badge bg-accent-soft">Chart.js</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-outline-light"><i class="bi bi-github me-1"></i>GitHub</a>
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal3Label">Brand Identity System</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-3 mb-3 rounded">
+            <i class="bi bi-brush"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A complete brand identity system for a fintech startup, including logo design, color palette, typography selection, iconography, and a comprehensive design system with reusable components.</p>
+          <h6 class="text-accent mt-3">Deliverables</h6>
+          <ul>
+            <li>Logo and logo variations</li>
+            <li>Color palette and usage guidelines</li>
+            <li>Typography scale and font pairings</li>
+            <li>Icon library (50+ custom icons)</li>
+            <li>Design system with Figma components</li>
+          </ul>
+          <h6 class="text-accent mt-3">Tools Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">Figma</span>
+            <span class="badge bg-accent-soft">Adobe Illustrator</span>
+            <span class="badge bg-accent-soft">After Effects</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>View Case Study</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal4Label">Task Management Tool</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-4 mb-3 rounded">
+            <i class="bi bi-kanban"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A real-time collaborative task management application inspired by Trello and Asana. Features Kanban boards with drag-and-drop, team chat, file sharing, and detailed project analytics.</p>
+          <h6 class="text-accent mt-3">Key Features</h6>
+          <ul>
+            <li>Drag-and-drop Kanban boards</li>
+            <li>Real-time collaboration with WebSockets</li>
+            <li>Integrated team chat</li>
+            <li>File attachments and sharing</li>
+            <li>Project timeline and Gantt views</li>
+          </ul>
+          <h6 class="text-accent mt-3">Technologies Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">Vue.js</span>
+            <span class="badge bg-accent-soft">Express</span>
+            <span class="badge bg-accent-soft">Socket.io</span>
+            <span class="badge bg-accent-soft">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-outline-light"><i class="bi bi-github me-1"></i>GitHub</a>
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal5Label">City Explorer</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-5 mb-3 rounded">
+            <i class="bi bi-geo-alt"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A location-based travel app with curated city guides, augmented reality navigation, and offline map support. Helps travelers discover hidden gems and popular attractions alike.</p>
+          <h6 class="text-accent mt-3">Key Features</h6>
+          <ul>
+            <li>Curated city guides with local tips</li>
+            <li>AR-powered street navigation</li>
+            <li>Offline map downloads</li>
+            <li>Social sharing and reviews</li>
+            <li>Multi-language support</li>
+          </ul>
+          <h6 class="text-accent mt-3">Technologies Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">Flutter</span>
+            <span class="badge bg-accent-soft">Dart</span>
+            <span class="badge bg-accent-soft">Google Maps API</span>
+            <span class="badge bg-accent-soft">ARCore</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-outline-light"><i class="bi bi-github me-1"></i>GitHub</a>
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="projectModal6Label">SaaS Dashboard UI</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="project-modal-img bg-gradient-6 mb-3 rounded">
+            <i class="bi bi-layout-text-window-reverse"></i>
+          </div>
+          <h6 class="text-accent">Project Overview</h6>
+          <p>A comprehensive analytics dashboard design for a SaaS product. Features interactive data visualizations, customizable widgets, dark mode toggle, and full WCAG 2.1 AA accessibility compliance.</p>
+          <h6 class="text-accent mt-3">Deliverables</h6>
+          <ul>
+            <li>Dashboard with 12+ widget types</li>
+            <li>Light and dark theme variants</li>
+            <li>Interactive chart prototypes</li>
+            <li>Responsive layouts (desktop to mobile)</li>
+            <li>Accessibility audit documentation</li>
+          </ul>
+          <h6 class="text-accent mt-3">Tools Used</h6>
+          <div class="d-flex flex-wrap gap-1">
+            <span class="badge bg-accent-soft">Figma</span>
+            <span class="badge bg-accent-soft">D3.js</span>
+            <span class="badge bg-accent-soft">Design Tokens</span>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="#" class="btn btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i>View Case Study</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Stats Section (jQuery animated counters)
+       ============================================================ -->
+  <section id="stats" class="py-5 bg-dark-alt">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3 fade-in">
+          <div class="stat-item">
+            <i class="bi bi-briefcase text-accent fs-2 mb-2 d-block"></i>
+            <h2 class="stat-number text-white fw-bold" data-target="50">0</h2>
+            <p class="text-muted mb-0">Projects Completed</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-in">
+          <div class="stat-item">
+            <i class="bi bi-people text-accent fs-2 mb-2 d-block"></i>
+            <h2 class="stat-number text-white fw-bold" data-target="35">0</h2>
+            <p class="text-muted mb-0">Happy Clients</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-in">
+          <div class="stat-item">
+            <i class="bi bi-award text-accent fs-2 mb-2 d-block"></i>
+            <h2 class="stat-number text-white fw-bold" data-target="12">0</h2>
+            <p class="text-muted mb-0">Awards Won</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-in">
+          <div class="stat-item">
+            <i class="bi bi-cup-hot text-accent fs-2 mb-2 d-block"></i>
+            <h2 class="stat-number text-white fw-bold" data-target="2500">0</h2>
+            <p class="text-muted mb-0">Cups of Coffee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Contact Section with BOOTSTRAP COMPONENT 8: Form
+       jQuery COMPONENT: Form Validation
+       ============================================================ -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in">
+        <h6 class="text-accent text-uppercase fw-semibold ls-wide">Get in Touch</h6>
+        <h2 class="section-heading">Let's Work Together</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4 mb-lg-0 fade-in">
+          <div class="contact-info">
+            <div class="d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <h6 class="text-white mb-0">Email</h6>
+                <small class="text-muted">alex@example.com</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <h6 class="text-white mb-0">Location</h6>
+                <small class="text-muted">San Francisco, CA</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-globe"></i>
+              </div>
+              <div>
+                <h6 class="text-white mb-0">Website</h6>
+                <small class="text-muted">www.alexmorgan.dev</small>
+              </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <h6 class="text-white mb-3">Follow Me</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <!-- BOOTSTRAP COMPONENT 8: Form -->
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label text-light">Full Name</label>
+              <input type="text" class="form-control bg-dark-input" id="nameInput" placeholder="John Doe" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label text-light">Email Address</label>
+              <input type="email" class="form-control bg-dark-input" id="emailInput" placeholder="john@example.com" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="mb-3">
+              <label for="subjectInput" class="form-label text-light">Subject</label>
+              <input type="text" class="form-control bg-dark-input" id="subjectInput" placeholder="Project Inquiry" required>
+              <div class="invalid-feedback">Please enter a subject.</div>
+            </div>
+            <div class="mb-3">
+              <label for="messageInput" class="form-label text-light">Message</label>
+              <textarea class="form-control bg-dark-input" id="messageInput" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-accent btn-lg w-100">
+              <i class="bi bi-send me-2"></i>Send Message
+            </button>
+            <div id="formSuccessAlert" class="alert alert-success mt-3 d-none" role="alert">
+              <i class="bi bi-check-circle me-2"></i>Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark-alt border-top border-secondary">
+    <div class="container text-center">
+      <p class="text-muted mb-1">
+        &copy; 2026 Alex Morgan. Built with
+        <span class="text-accent">Bootstrap</span> &amp;
+        <span class="text-accent">jQuery</span>.
+      </p>
+      <small class="text-muted">Designed with AI assistance from Claude.</small>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" class="btn btn-accent rounded-circle" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/custom.js"></script>
+</body>
+</html>
