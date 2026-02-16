@@ -160,7 +160,8 @@ CADProfileBlu/
 │   └── custom.css          Custom styles (dark theme, components, responsive)
 ├── js/
 │   └── custom.js           jQuery components and interactions
-├── images/                 Image assets directory (placeholder)
+├── assets
+│   └──images/              Image assets directory
 ├── COMPONENTS.txt          This documentation file
 └── README.md               Project overview and setup instructions
 

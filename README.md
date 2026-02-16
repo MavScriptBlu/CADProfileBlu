@@ -56,10 +56,11 @@ Open `index.html` in any modern browser to view the site.
 CADProfileBlu/
 ├── index.html          # Main HTML page (all sections)
 ├── css/
-│   └── custom.css      # Custom dark theme styling (~600 lines)
+│   └── custom.css      # Custom dark theme styling
 ├── js/
-│   └── custom.js       # jQuery interactions and effects (~290 lines)
-├── images/             # Image assets directory
+│   └── custom.js       # jQuery interactions and effects
+├── assets
+│   └──images/          # Image assets directory
 ├── COMPONENTS.txt      # Detailed component documentation
 └── README.md           # This file
 ```
@@ -75,6 +76,7 @@ This website was generated with AI assistance from **Claude** (Anthropic) for th
 ## Author
 
 **Blue** (MavScript.blu)
+
 - Website: [mavscript.blue](https://www.mavscript.blue)
 - GitHub: [github.com/MavScriptBlu](https://github.com/MavScriptBlu)
 - Location: Wisconsin
