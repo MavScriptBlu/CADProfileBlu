@@ -23,10 +23,13 @@
 		<link href="css/custom.css" rel="stylesheet" />
 	</head>
 	<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+		<!-- Skip to main content (accessibility) -->
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+
 		<!-- ============================================================
        Navbar (responsive with toggler)
        ============================================================ -->
-		<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Main navigation">
 			<div class="container">
 				<a class="navbar-brand fw-bold" href="#">
 					<span class="text-accent">&lt;</span>MavScript.blu<span
@@ -72,12 +75,14 @@
 		<!-- ============================================================
        Hero Carousel
        ============================================================ -->
-		<section id="hero">
+		<section id="hero" aria-label="Hero introduction">
 			<div
 				id="heroCarousel"
 				class="carousel slide carousel-fade"
 				data-bs-ride="carousel"
-				data-bs-interval="5000">
+				data-bs-interval="5000"
+				aria-roledescription="carousel"
+				aria-label="Introduction slides">
 				<div class="carousel-indicators">
 					<button
 						type="button"
@@ -97,8 +102,8 @@
 						data-bs-slide-to="2"
 						aria-label="Slide 3"></button>
 				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
+				<div class="carousel-inner" aria-live="off">
+					<div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
 						<div class="hero-slide hero-gradient-intro">
 							<div class="hero-slide-overlay"></div>
 							<div class="hero-caption">
@@ -114,7 +119,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
 						<div class="hero-slide hero-gradient-skills">
 							<div class="hero-slide-overlay"></div>
 							<div class="hero-caption">
@@ -131,7 +136,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
 						<div class="hero-slide hero-gradient-collaborate">
 							<div class="hero-slide-overlay"></div>
 							<div class="hero-caption">
@@ -171,7 +176,8 @@
 		<!-- ============================================================
        About Section with Accordion
        ============================================================ -->
-		<section id="about" class="py-5">
+		<main id="main-content">
+		<section id="about" class="py-5" aria-labelledby="about-heading">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-5 mb-4 mb-lg-0 text-center fade-in">
@@ -186,7 +192,7 @@
 						<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 							About Me
 						</h6>
-						<h2 class="section-heading">
+						<h2 id="about-heading" class="section-heading">
 							Software Developer<br />Based in Wisconsin
 						</h2>
 						<p class="text-muted mb-4">
@@ -285,13 +291,13 @@
 		<!-- ============================================================
        Skills Section with Progress Bars and Badges
        ============================================================ -->
-		<section id="skills" class="py-5 section-bg-dark">
+		<section id="skills" class="py-5 section-bg-dark" aria-labelledby="skills-heading">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
 					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						What I Do
 					</h6>
-					<h2 class="section-heading text-white">Skills &amp; Technologies</h2>
+					<h2 id="skills-heading" class="section-heading text-white">Skills &amp; Technologies</h2>
 				</div>
 				<div class="row">
 					<!-- Progress Bars -->
@@ -465,13 +471,13 @@
 		<!-- ============================================================
        Portfolio Section with Cards and Modals
        ============================================================ -->
-		<section id="portfolio" class="py-5">
+		<section id="portfolio" class="py-5" aria-labelledby="portfolio-heading">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
 					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						My Work
 					</h6>
-					<h2 class="section-heading">Featured Projects</h2>
+					<h2 id="portfolio-heading" class="section-heading">Featured Projects</h2>
 				</div>
 
 				<!-- Filter Buttons -->
@@ -1094,8 +1100,9 @@
 		<!-- ============================================================
        Stats Section (jQuery animated counters)
        ============================================================ -->
-		<section id="stats" class="py-5 section-bg-dark">
+		<section id="stats" class="py-5 section-bg-dark" aria-labelledby="stats-heading">
 			<div class="container">
+				<h2 id="stats-heading" class="visually-hidden">Statistics</h2>
 				<div class="row text-center g-4">
 					<div class="col-6 col-md-3 fade-in">
 						<div class="stat-item">
@@ -1134,20 +1141,20 @@
 		<!-- ============================================================
        Contact Section with Form
        ============================================================ -->
-		<section id="contact" class="py-5">
+		<section id="contact" class="py-5" aria-labelledby="contact-heading">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
 					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						Get in Touch
 					</h6>
-					<h2 class="section-heading">Let's Work Together</h2>
+					<h2 id="contact-heading" class="section-heading">Let's Work Together</h2>
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-lg-4 mb-4 mb-lg-0 fade-in">
 						<div class="contact-info">
 							<div class="d-flex align-items-center mb-4">
 								<div class="contact-icon me-3">
-									<i class="bi bi-geo-alt"></i>
+									<i class="bi bi-geo-alt" aria-hidden="true"></i>
 								</div>
 								<div>
 									<h6 class="text-white mb-0">Location</h6>
@@ -1156,7 +1163,7 @@
 							</div>
 							<div class="d-flex align-items-center mb-4">
 								<div class="contact-icon me-3">
-									<i class="bi bi-globe"></i>
+									<i class="bi bi-globe" aria-hidden="true"></i>
 								</div>
 								<div>
 									<h6 class="text-white mb-0">Website</h6>
@@ -1170,7 +1177,7 @@
 							</div>
 							<div class="d-flex align-items-center mb-4">
 								<div class="contact-icon me-3">
-									<i class="bi bi-github"></i>
+									<i class="bi bi-github" aria-hidden="true"></i>
 								</div>
 								<div>
 									<h6 class="text-white mb-0">GitHub</h6>
@@ -1189,13 +1196,14 @@
 									href="https://github.com/MavScriptBlu"
 									target="_blank"
 									class="social-link"
-									><i class="bi bi-github"></i
+									aria-label="GitHub profile"
+									><i class="bi bi-github" aria-hidden="true"></i
 								></a>
-								<a href="#" class="social-link"
-									><i class="bi bi-linkedin"></i
+								<a href="#" class="social-link" aria-label="LinkedIn profile"
+									><i class="bi bi-linkedin" aria-hidden="true"></i
 								></a>
-								<a href="#" class="social-link"
-									><i class="bi bi-twitter-x"></i
+								<a href="#" class="social-link" aria-label="X (Twitter) profile"
+									><i class="bi bi-twitter-x" aria-hidden="true"></i
 								></a>
 							</div>
 						</div>
@@ -1259,7 +1267,8 @@
 							<div
 								id="formSuccessAlert"
 								class="alert alert-success mt-3 d-none"
-								role="alert">
+								role="alert"
+								aria-live="polite">
 								<i class="bi bi-check-circle me-2"></i>Message sent
 								successfully! I'll get back to you soon.
 							</div>
@@ -1269,8 +1278,10 @@
 			</div>
 		</section>
 
+		</main>
+
 		<!-- Footer -->
-		<footer class="py-4 section-bg-dark border-top border-secondary">
+		<footer class="py-4 section-bg-dark border-top border-secondary" role="contentinfo">
 			<div class="container text-center">
 				<p class="text-muted mb-1">
 					&copy; 2026 MavScript.blu. Built with

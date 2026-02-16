@@ -10,6 +10,9 @@
 
 $(document).ready(function () {
 
+  // Detect reduced motion preference
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ============================================================
      JQUERY COMPONENT 1: Animated Scroll Effects
      - Fade-in elements as they enter the viewport
@@ -196,6 +199,13 @@ $(document).ready(function () {
       $('.stat-number').each(function () {
         var $this = $(this);
         var target = parseInt($this.data('target'), 10);
+
+        // Skip animation if user prefers reduced motion
+        if (prefersReducedMotion) {
+          $this.text(target.toLocaleString());
+          return;
+        }
+
         var duration = 2000; // 2 seconds
         var startTime = null;
 
@@ -278,10 +288,16 @@ $(document).ready(function () {
       $('.progress-bar').each(function (index) {
         var $bar = $(this);
         var target = $bar.data('target');
-        // Stagger the animation
-        setTimeout(function () {
+
+        if (prefersReducedMotion) {
+          // Show bars immediately without stagger
           $bar.css('width', target + '%');
-        }, index * 150);
+        } else {
+          // Stagger the animation
+          setTimeout(function () {
+            $bar.css('width', target + '%');
+          }, index * 150);
+        }
       });
     }
   }
