@@ -1,8 +1,8 @@
 /**
  * ============================================================
- *    Custom CSS for Alex Morgan Personal Portfolio
+ *    Custom CSS for Blue / MavScript.blu Portfolio
  *    Theme: Dark modern with cyan/teal accent
- *    ============================================================
+ * ============================================================
  *
  * @format
  */
@@ -55,11 +55,11 @@ body {
 	background-color: var(--accent) !important;
 }
 
-.bg-dark-alt {
+.section-bg-dark {
 	background-color: var(--bg-secondary);
 }
 
-.ls-wide {
+.letter-spacing-wide {
 	letter-spacing: 2px;
 }
 
@@ -179,13 +179,13 @@ body {
 }
 
 /* ============================================================
-   CAROUSEL / HERO
+   HERO CAROUSEL
    ============================================================ */
 #hero {
 	position: relative;
 }
 
-.carousel-slide {
+.hero-slide {
 	height: 100vh;
 	min-height: 600px;
 	display: flex;
@@ -194,19 +194,19 @@ body {
 	position: relative;
 }
 
-.slide-1 {
+.hero-gradient-intro {
 	background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%);
 }
 
-.slide-2 {
+.hero-gradient-skills {
 	background: linear-gradient(135deg, #0d1117 0%, #1b2838 50%, #0f3460 100%);
 }
 
-.slide-3 {
+.hero-gradient-collaborate {
 	background: linear-gradient(135deg, #0d1117 0%, #2d1b4e 50%, #1a1a2e 100%);
 }
 
-.carousel-overlay {
+.hero-slide-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -219,30 +219,30 @@ body {
 	);
 }
 
-.carousel-caption-custom {
+.hero-caption {
 	position: relative;
 	z-index: 2;
 	text-align: center;
 	padding: 0 1rem;
 }
 
-.carousel-caption-custom h1 {
+.hero-caption h1 {
 	text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-caption-custom .lead {
+.hero-caption .lead {
 	font-size: 1.25rem;
 	color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
-	.carousel-slide {
+	.hero-slide {
 		min-height: 500px;
 	}
-	.carousel-caption-custom h1 {
+	.hero-caption h1 {
 		font-size: 2rem;
 	}
-	.carousel-caption-custom .lead {
+	.hero-caption .lead {
 		font-size: 1rem;
 	}
 }
@@ -266,37 +266,27 @@ body {
 	background-color: var(--bg-primary);
 }
 
-.about-img-wrapper {
+.profile-photo-wrapper {
 	display: inline-block;
 	width: 280px;
 	height: 280px;
 	border-radius: 50%;
-}
-
-.img {
-	width: 280px;
-	height: 280px;
-	border-radius: 50%;
-	background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
+	overflow: hidden;
 	box-shadow: 0 0 40px var(--accent-glow);
+	border: 3px solid var(--accent);
 }
 
-.about-placeholder-img i {
-	font-size: 8rem;
-	color: var(--bg-primary);
+.profile-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 @media (max-width: 768px) {
-	.about-placeholder-img {
+	.profile-photo-wrapper {
 		width: 200px;
 		height: 200px;
-	}
-	.about-placeholder-img i {
-		font-size: 5rem;
 	}
 }
 
@@ -370,7 +360,7 @@ body {
 	background-color: var(--bg-primary);
 }
 
-.filter-group .btn {
+.portfolio-filter-group .btn {
 	border-radius: 25px;
 	padding: 0.4rem 1.2rem;
 	font-size: 0.85rem;
@@ -390,47 +380,47 @@ body {
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.project-img-placeholder {
+.project-card-thumbnail {
 	height: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.project-img-placeholder i {
+.project-card-thumbnail i {
 	font-size: 3.5rem;
 	color: rgba(255, 255, 255, 0.7);
 }
 
-.project-modal-img {
+.project-modal-thumbnail {
 	height: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.project-modal-img i {
+.project-modal-thumbnail i {
 	font-size: 4rem;
 	color: rgba(255, 255, 255, 0.7);
 }
 
 /* Gradient backgrounds for project cards */
-.bg-gradient-1 {
+.project-gradient-pixelboof {
 	background: linear-gradient(135deg, #667eea, #764ba2);
 }
-.bg-gradient-2 {
+.project-gradient-wtwr {
 	background: linear-gradient(135deg, #f093fb, #f5576c);
 }
-.bg-gradient-3 {
+.project-gradient-dnd {
 	background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
-.bg-gradient-4 {
+.project-gradient-overlays {
 	background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
-.bg-gradient-5 {
+.project-gradient-spots {
 	background: linear-gradient(135deg, #fa709a, #fee140);
 }
-.bg-gradient-6 {
+.project-gradient-golfscorer {
 	background: linear-gradient(135deg, #a18cd1, #fbc2eb);
 }
 
@@ -528,7 +518,7 @@ body {
 }
 
 /* Form inputs */
-.bg-dark-input {
+.form-input-dark {
 	background-color: var(--bg-card);
 	border: 1px solid var(--border-color);
 	color: var(--text-primary);
@@ -539,14 +529,14 @@ body {
 		box-shadow 0.3s ease;
 }
 
-.bg-dark-input:focus {
+.form-input-dark:focus {
 	background-color: var(--bg-card);
 	color: var(--text-primary);
 	border-color: var(--accent);
 	box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-.bg-dark-input::placeholder {
+.form-input-dark::placeholder {
 	color: var(--text-muted);
 	opacity: 0.6;
 }
@@ -630,7 +620,7 @@ footer {
 		padding-bottom: 3rem !important;
 	}
 
-	.filter-group .btn {
+	.portfolio-filter-group .btn {
 		font-size: 0.75rem;
 		padding: 0.3rem 0.8rem;
 	}

@@ -24,7 +24,7 @@
 	</head>
 	<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 		<!-- ============================================================
-       BOOTSTRAP COMPONENT 1: Navbar (responsive with toggler)
+       Navbar (responsive with toggler)
        ============================================================ -->
 		<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
 			<div class="container">
@@ -70,7 +70,7 @@
 		</nav>
 
 		<!-- ============================================================
-       BOOTSTRAP COMPONENT 2: Carousel (hero section)
+       Hero Carousel
        ============================================================ -->
 		<section id="hero">
 			<div
@@ -99,9 +99,9 @@
 				</div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<div class="carousel-slide slide-1">
-							<div class="carousel-overlay"></div>
-							<div class="carousel-caption-custom">
+						<div class="hero-slide hero-gradient-intro">
+							<div class="hero-slide-overlay"></div>
+							<div class="hero-caption">
 								<h1 class="display-3 fw-bold">
 									Hi, I'm <span class="text-accent">Blue</span>
 								</h1>
@@ -115,9 +115,9 @@
 						</div>
 					</div>
 					<div class="carousel-item">
-						<div class="carousel-slide slide-2">
-							<div class="carousel-overlay"></div>
-							<div class="carousel-caption-custom">
+						<div class="hero-slide hero-gradient-skills">
+							<div class="hero-slide-overlay"></div>
+							<div class="hero-caption">
 								<h1 class="display-3 fw-bold">
 									I Build <span class="text-accent">Full-Stack Apps</span>
 								</h1>
@@ -132,9 +132,9 @@
 						</div>
 					</div>
 					<div class="carousel-item">
-						<div class="carousel-slide slide-3">
-							<div class="carousel-overlay"></div>
-							<div class="carousel-caption-custom">
+						<div class="hero-slide hero-gradient-collaborate">
+							<div class="hero-slide-overlay"></div>
+							<div class="hero-caption">
 								<h1 class="display-3 fw-bold">
 									Let's <span class="text-accent">Work Together</span>
 								</h1>
@@ -169,18 +169,21 @@
 		</section>
 
 		<!-- ============================================================
-       About Section with BOOTSTRAP COMPONENT 5: Accordion
+       About Section with Accordion
        ============================================================ -->
 		<section id="about" class="py-5">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-5 mb-4 mb-lg-0 text-center fade-in">
-						<div class="about-img-wrapper">
-							<img src="assets/images/20240406_203144.jpg" />
+						<div class="profile-photo-wrapper">
+							<img
+								class="profile-photo"
+								src="assets/images/20240406_203144.jpg"
+								alt="Blue - Software Developer" />
 						</div>
 					</div>
 					<div class="col-lg-7 fade-in">
-						<h6 class="text-accent text-uppercase fw-semibold ls-wide">
+						<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 							About Me
 						</h6>
 						<h2 class="section-heading">
@@ -195,7 +198,7 @@
 							tackling new challenges and turning ideas into working software.
 						</p>
 
-						<!-- BOOTSTRAP COMPONENT 5: Accordion -->
+						<!-- Accordion -->
 						<div class="accordion" id="aboutAccordion">
 							<div class="accordion-item">
 								<h2 class="accordion-header">
@@ -280,13 +283,12 @@
 		</section>
 
 		<!-- ============================================================
-       Skills Section with BOOTSTRAP COMPONENT 6: Progress Bars
-       and BOOTSTRAP COMPONENT 7: Badges
+       Skills Section with Progress Bars and Badges
        ============================================================ -->
-		<section id="skills" class="py-5 bg-dark-alt">
+		<section id="skills" class="py-5 section-bg-dark">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
-					<h6 class="text-accent text-uppercase fw-semibold ls-wide">
+					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						What I Do
 					</h6>
 					<h2 class="section-heading text-white">Skills &amp; Technologies</h2>
@@ -403,7 +405,6 @@
 					<div class="col-lg-6 mb-4 fade-in">
 						<h5 class="text-white mb-4">Tech Stack</h5>
 						<div class="d-flex flex-wrap gap-2 mb-4">
-							<!-- BOOTSTRAP COMPONENT 7: Badges -->
 							<span class="badge bg-accent-soft">HTML5</span>
 							<span class="badge bg-accent-soft">CSS3</span>
 							<span class="badge bg-accent-soft">SCSS</span>
@@ -462,23 +463,21 @@
 		</section>
 
 		<!-- ============================================================
-       Portfolio Section with BOOTSTRAP COMPONENT 3: Cards
-       and BOOTSTRAP COMPONENT 4: Modal
-       jQuery COMPONENT: Portfolio filtering
+       Portfolio Section with Cards and Modals
        ============================================================ -->
 		<section id="portfolio" class="py-5">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
-					<h6 class="text-accent text-uppercase fw-semibold ls-wide">
+					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						My Work
 					</h6>
 					<h2 class="section-heading">Featured Projects</h2>
 				</div>
 
-				<!-- jQuery Component: Filter Buttons -->
+				<!-- Filter Buttons -->
 				<div class="text-center mb-4 fade-in">
 					<div
-						class="btn-group filter-group"
+						class="btn-group portfolio-filter-group"
 						role="group"
 						aria-label="Portfolio filters">
 						<button
@@ -508,14 +507,14 @@
 					</div>
 				</div>
 
-				<!-- BOOTSTRAP COMPONENT 3: Cards -->
+				<!-- Project Cards -->
 				<div class="row g-4" id="portfolioGrid">
 					<!-- Project 1: PixelBoof -->
 					<div
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="fullstack">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-1">
+							<div class="card-img-top project-card-thumbnail project-gradient-pixelboof">
 								<i class="bi bi-camera"></i>
 							</div>
 							<div class="card-body">
@@ -538,19 +537,19 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal1">
+									data-bs-target="#modalPixelboof">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
 						</div>
 					</div>
 
-					<!-- Project 2: WTWR (se_project_react + se_project_express) -->
+					<!-- Project 2: WTWR -->
 					<div
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="fullstack">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-2">
+							<div class="card-img-top project-card-thumbnail project-gradient-wtwr">
 								<i class="bi bi-cloud-sun"></i>
 							</div>
 							<div class="card-body">
@@ -574,7 +573,7 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal2">
+									data-bs-target="#modalWtwr">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -586,7 +585,7 @@
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="fullstack">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-3">
+							<div class="card-img-top project-card-thumbnail project-gradient-dnd">
 								<i class="bi bi-dice-5"></i>
 							</div>
 							<div class="card-body">
@@ -608,7 +607,7 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal3">
+									data-bs-target="#modalDnd">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -620,7 +619,7 @@
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="frontend">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-4">
+							<div class="card-img-top project-card-thumbnail project-gradient-overlays">
 								<i class="bi bi-broadcast"></i>
 							</div>
 							<div class="card-body">
@@ -643,7 +642,7 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal4">
+									data-bs-target="#modalOverlays">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -655,7 +654,7 @@
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="frontend">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-5">
+							<div class="card-img-top project-card-thumbnail project-gradient-spots">
 								<i class="bi bi-image"></i>
 							</div>
 							<div class="card-body">
@@ -678,7 +677,7 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal5">
+									data-bs-target="#modalSpots">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -690,7 +689,7 @@
 						class="col-md-6 col-lg-4 portfolio-item fade-in"
 						data-category="tools">
 						<div class="card project-card h-100">
-							<div class="card-img-top project-img-placeholder bg-gradient-6">
+							<div class="card-img-top project-card-thumbnail project-gradient-golfscorer">
 								<i class="bi bi-terminal"></i>
 							</div>
 							<div class="card-body">
@@ -713,7 +712,7 @@
 								<button
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
-									data-bs-target="#projectModal6">
+									data-bs-target="#modalGolfscorer">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -724,19 +723,19 @@
 		</section>
 
 		<!-- ============================================================
-       BOOTSTRAP COMPONENT 4: Modals (project detail modals)
+       Project Detail Modals
        ============================================================ -->
-		<!-- Modal 1: PixelBoof -->
+		<!-- Modal: PixelBoof -->
 		<div
 			class="modal fade"
-			id="projectModal1"
+			id="modalPixelboof"
 			tabindex="-1"
-			aria-labelledby="projectModal1Label"
+			aria-labelledby="modalPixelboofLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal1Label">PixelBoof</h5>
+						<h5 class="modal-title" id="modalPixelboofLabel">PixelBoof</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -744,7 +743,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-1 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-pixelboof mb-3 rounded">
 							<i class="bi bi-camera"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -787,17 +786,17 @@
 			</div>
 		</div>
 
-		<!-- Modal 2: WTWR -->
+		<!-- Modal: WTWR -->
 		<div
 			class="modal fade"
-			id="projectModal2"
+			id="modalWtwr"
 			tabindex="-1"
-			aria-labelledby="projectModal2Label"
+			aria-labelledby="modalWtwrLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal2Label">
+						<h5 class="modal-title" id="modalWtwrLabel">
 							WTWR (What to Wear)
 						</h5>
 						<button
@@ -807,7 +806,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-2 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-wtwr mb-3 rounded">
 							<i class="bi bi-cloud-sun"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -859,17 +858,17 @@
 			</div>
 		</div>
 
-		<!-- Modal 3: DnD-space -->
+		<!-- Modal: DnD-space -->
 		<div
 			class="modal fade"
-			id="projectModal3"
+			id="modalDnd"
 			tabindex="-1"
-			aria-labelledby="projectModal3Label"
+			aria-labelledby="modalDndLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal3Label">DnD-space</h5>
+						<h5 class="modal-title" id="modalDndLabel">DnD-space</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -877,7 +876,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-3 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-dnd mb-3 rounded">
 							<i class="bi bi-dice-5"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -918,17 +917,17 @@
 			</div>
 		</div>
 
-		<!-- Modal 4: TwitchOverlays -->
+		<!-- Modal: Twitch Overlays -->
 		<div
 			class="modal fade"
-			id="projectModal4"
+			id="modalOverlays"
 			tabindex="-1"
-			aria-labelledby="projectModal4Label"
+			aria-labelledby="modalOverlaysLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal4Label">Twitch Overlays</h5>
+						<h5 class="modal-title" id="modalOverlaysLabel">Twitch Overlays</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -936,7 +935,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-4 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-overlays mb-3 rounded">
 							<i class="bi bi-broadcast"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -978,17 +977,17 @@
 			</div>
 		</div>
 
-		<!-- Modal 5: Spots -->
+		<!-- Modal: Spots -->
 		<div
 			class="modal fade"
-			id="projectModal5"
+			id="modalSpots"
 			tabindex="-1"
-			aria-labelledby="projectModal5Label"
+			aria-labelledby="modalSpotsLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal5Label">Spots</h5>
+						<h5 class="modal-title" id="modalSpotsLabel">Spots</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -996,7 +995,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-5 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-spots mb-3 rounded">
 							<i class="bi bi-image"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -1038,17 +1037,17 @@
 			</div>
 		</div>
 
-		<!-- Modal 6: GolfScorer -->
+		<!-- Modal: GolfScorer -->
 		<div
 			class="modal fade"
-			id="projectModal6"
+			id="modalGolfscorer"
 			tabindex="-1"
-			aria-labelledby="projectModal6Label"
+			aria-labelledby="modalGolfscorerLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-dark text-light">
 					<div class="modal-header border-secondary">
-						<h5 class="modal-title" id="projectModal6Label">GolfScorer</h5>
+						<h5 class="modal-title" id="modalGolfscorerLabel">GolfScorer</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -1056,7 +1055,7 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="project-modal-img bg-gradient-6 mb-3 rounded">
+						<div class="project-modal-thumbnail project-gradient-golfscorer mb-3 rounded">
 							<i class="bi bi-terminal"></i>
 						</div>
 						<h6 class="text-accent">Project Overview</h6>
@@ -1095,7 +1094,7 @@
 		<!-- ============================================================
        Stats Section (jQuery animated counters)
        ============================================================ -->
-		<section id="stats" class="py-5 bg-dark-alt">
+		<section id="stats" class="py-5 section-bg-dark">
 			<div class="container">
 				<div class="row text-center g-4">
 					<div class="col-6 col-md-3 fade-in">
@@ -1133,13 +1132,12 @@
 		</section>
 
 		<!-- ============================================================
-       Contact Section with BOOTSTRAP COMPONENT 8: Form
-       jQuery COMPONENT: Form Validation
+       Contact Section with Form
        ============================================================ -->
 		<section id="contact" class="py-5">
 			<div class="container">
 				<div class="text-center mb-5 fade-in">
-					<h6 class="text-accent text-uppercase fw-semibold ls-wide">
+					<h6 class="text-accent text-uppercase fw-semibold letter-spacing-wide">
 						Get in Touch
 					</h6>
 					<h2 class="section-heading">Let's Work Together</h2>
@@ -1203,7 +1201,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6 fade-in">
-						<!-- BOOTSTRAP COMPONENT 8: Form -->
+						<!-- Contact Form -->
 						<form id="contactForm" novalidate>
 							<div class="mb-3">
 								<label for="nameInput" class="form-label text-light"
@@ -1211,7 +1209,7 @@
 								>
 								<input
 									type="text"
-									class="form-control bg-dark-input"
+									class="form-control form-input-dark"
 									id="nameInput"
 									placeholder="Your name"
 									required />
@@ -1223,7 +1221,7 @@
 								>
 								<input
 									type="email"
-									class="form-control bg-dark-input"
+									class="form-control form-input-dark"
 									id="emailInput"
 									placeholder="you@example.com"
 									required />
@@ -1237,7 +1235,7 @@
 								>
 								<input
 									type="text"
-									class="form-control bg-dark-input"
+									class="form-control form-input-dark"
 									id="subjectInput"
 									placeholder="Project Inquiry"
 									required />
@@ -1248,7 +1246,7 @@
 									>Message</label
 								>
 								<textarea
-									class="form-control bg-dark-input"
+									class="form-control form-input-dark"
 									id="messageInput"
 									rows="5"
 									placeholder="Tell me about your project..."
@@ -1272,7 +1270,7 @@
 		</section>
 
 		<!-- Footer -->
-		<footer class="py-4 bg-dark-alt border-top border-secondary">
+		<footer class="py-4 section-bg-dark border-top border-secondary">
 			<div class="container text-center">
 				<p class="text-muted mb-1">
 					&copy; 2026 MavScript.blu. Built with

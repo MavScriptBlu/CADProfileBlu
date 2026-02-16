@@ -1,5 +1,5 @@
 /* ============================================================
-   Custom jQuery for Alex Morgan Personal Portfolio
+   Custom jQuery for Blue / MavScript.blu Portfolio
 
    jQuery Components Implemented:
    1. Animated Scroll Effects (fade-in on scroll)
@@ -229,9 +229,9 @@ $(document).ready(function () {
      - Animated show/hide with CSS transitions
      ============================================================ */
 
-  $('.filter-group .btn').on('click', function () {
+  $('.portfolio-filter-group .btn').on('click', function () {
     // Update active button
-    $('.filter-group .btn').removeClass('active');
+    $('.portfolio-filter-group .btn').removeClass('active');
     $(this).addClass('active');
 
     var filter = $(this).data('filter');
