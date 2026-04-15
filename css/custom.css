@@ -423,6 +423,15 @@ body {
 .project-gradient-golfscorer {
 	background: linear-gradient(135deg, #a18cd1, #fbc2eb);
 }
+.project-gradient-scheduler {
+	background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+.project-gradient-theater {
+	background: linear-gradient(135deg, #c471ed, #f64f59);
+}
+.project-gradient-dreamru {
+	background: linear-gradient(135deg, #0f3443, #34e89e);
+}
 
 .card-title {
 	color: var(--text-primary);
@@ -430,23 +439,6 @@ body {
 
 .card-text {
 	font-size: 0.9rem;
-}
-
-/* Portfolio item hide/show animation */
-.portfolio-item {
-	transition: all 0.4s ease;
-}
-
-.portfolio-item.hide {
-	opacity: 0;
-	transform: scale(0.8);
-	position: absolute;
-	pointer-events: none;
-}
-
-.portfolio-item.show {
-	opacity: 1;
-	transform: scale(1);
 }
 
 /* ============================================================
