@@ -251,9 +251,17 @@ $(document).ready(function () {
       var category = $item.data('category');
 
       if (filter === 'all' || category === filter) {
-        $item.stop(true).fadeIn(350);
+        if (prefersReducedMotion) {
+          $item.stop(true, true).show();
+        } else {
+          $item.stop(true).fadeIn(350);
+        }
       } else {
-        $item.stop(true).fadeOut(280);
+        if (prefersReducedMotion) {
+          $item.stop(true, true).hide();
+        } else {
+          $item.stop(true).fadeOut(280);
+        }
       }
     });
   });
