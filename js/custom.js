@@ -236,7 +236,7 @@ $(document).ready(function () {
   /* ============================================================
      JQUERY COMPONENT 4: Portfolio Filtering
       - Filters portfolio cards by category
-      - Animated show/hide with jQuery fade effects
+      - Animated show/hide with fade effects (or instant toggle for reduced motion)
       ============================================================ */
 
   $('.portfolio-filter-group .btn').on('click', function () {
