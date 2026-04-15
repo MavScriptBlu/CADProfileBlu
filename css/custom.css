@@ -441,11 +441,6 @@ body {
 	font-size: 0.9rem;
 }
 
-/* Portfolio item filter animation */
-.portfolio-item {
-	transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
 /* ============================================================
    STATS SECTION
    ============================================================ */
