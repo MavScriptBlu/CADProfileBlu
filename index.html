@@ -419,6 +419,23 @@
 									<span class="text-light">Bootstrap / jQuery</span>
 									<span class="text-accent">85%</span>
 								</div>
+						<div class="mb-3">
+							<div class="d-flex justify-content-between mb-1">
+								<span class="text-light">C# / .NET</span>
+								<span class="text-accent">65%</span>
+							</div>
+							<div
+								class="progress"
+								role="progressbar"
+								aria-valuenow="65"
+								aria-valuemin="0"
+								aria-valuemax="100">
+								<div
+									class="progress-bar bg-accent"
+									style="width: 0%"
+									data-target="65"></div>
+							</div>
+						</div>
 								<div
 									class="progress"
 									role="progressbar"
@@ -453,6 +470,9 @@
 								<span class="badge bg-accent-soft">Google Cloud</span>
 								<span class="badge bg-accent-soft">REST APIs</span>
 								<span class="badge bg-accent-soft">Responsive Design</span>
+								<span class="badge bg-accent-soft">C#</span>
+								<span class="badge bg-accent-soft">SQL</span>
+								<span class="badge bg-accent-soft">Angular</span>
 							</div>
 							<h5 class="text-white mb-3 mt-4">What I Bring</h5>
 							<div class="row g-3">
@@ -759,6 +779,111 @@
 										View Details <i class="bi bi-arrow-right"></i>
 									</button>
 								</div>
+
+					<!-- Project 7: Con Scheduler -->
+					<div
+						class="col-md-6 col-lg-4 portfolio-item fade-in"
+						data-category="frontend">
+						<div class="card project-card h-100">
+							<div
+								class="card-img-top project-card-thumbnail project-gradient-scheduler">
+								<i class="bi bi-calendar2-check"></i>
+							</div>
+							<div class="card-body">
+								<div
+									class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Con Scheduler</h5>
+									<span class="badge bg-accent-soft">Frontend</span>
+								</div>
+								<p class="card-text text-muted">
+									An event scheduling app for managing panels and sessions at fan conventions, built for MavScript Con.
+								</p>
+								<div class="d-flex flex-wrap gap-1 mb-3">
+									<small class="badge bg-dark">JavaScript</small>
+									<small class="badge bg-dark">HTML</small>
+									<small class="badge bg-dark">CSS</small>
+								</div>
+							</div>
+							<div class="card-footer bg-transparent border-0 pb-3">
+								<button
+									class="btn btn-sm btn-accent"
+									data-bs-toggle="modal"
+									data-bs-target="#modalScheduler">
+									View Details <i class="bi bi-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Project 8: TheaterOOP -->
+					<div
+						class="col-md-6 col-lg-4 portfolio-item fade-in"
+						data-category="tools">
+						<div class="card project-card h-100">
+							<div
+								class="card-img-top project-card-thumbnail project-gradient-theater">
+								<i class="bi bi-masks-theater"></i>
+							</div>
+							<div class="card-body">
+								<div
+									class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">TheaterOOP</h5>
+									<span class="badge bg-accent-soft">Tools</span>
+								</div>
+								<p class="card-text text-muted">
+									A C# object-oriented application simulating theater management &mdash; seats, shows, and ticket handling built with clean OOP architecture.
+								</p>
+								<div class="d-flex flex-wrap gap-1 mb-3">
+									<small class="badge bg-dark">C#</small>
+									<small class="badge bg-dark">OOP</small>
+									<small class="badge bg-dark">.NET</small>
+								</div>
+							</div>
+							<div class="card-footer bg-transparent border-0 pb-3">
+								<button
+									class="btn btn-sm btn-accent"
+									data-bs-toggle="modal"
+									data-bs-target="#modalTheater">
+									View Details <i class="bi bi-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Project 9: Dream of Ru -->
+					<div
+						class="col-md-6 col-lg-4 portfolio-item fade-in"
+						data-category="frontend">
+						<div class="card project-card h-100">
+							<div
+								class="card-img-top project-card-thumbnail project-gradient-dreamru">
+								<i class="bi bi-moon-stars"></i>
+							</div>
+							<div class="card-body">
+								<div
+									class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Dream of Ru</h5>
+									<span class="badge bg-accent-soft">Frontend</span>
+								</div>
+								<p class="card-text text-muted">
+									A creative JavaScript web experience &mdash; an interactive visual project exploring storytelling through web technology.
+								</p>
+								<div class="d-flex flex-wrap gap-1 mb-3">
+									<small class="badge bg-dark">JavaScript</small>
+									<small class="badge bg-dark">HTML</small>
+									<small class="badge bg-dark">CSS</small>
+								</div>
+							</div>
+							<div class="card-footer bg-transparent border-0 pb-3">
+								<button
+									class="btn btn-sm btn-accent"
+									data-bs-toggle="modal"
+									data-bs-target="#modalDreamru">
+									View Details <i class="bi bi-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
 							</div>
 						</div>
 					</div>
@@ -1143,6 +1268,177 @@
 				</div>
 			</div>
 
+
+			<!-- Modal: Con Scheduler -->
+			<div
+				class="modal fade"
+				id="modalScheduler"
+				tabindex="-1"
+				aria-labelledby="modalSchedulerLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content bg-dark text-light">
+						<div class="modal-header border-secondary">
+							<h5 class="modal-title" id="modalSchedulerLabel">Con Scheduler</h5>
+							<button
+								type="button"
+								class="btn-close btn-close-white"
+								data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div
+								class="project-modal-thumbnail project-gradient-scheduler mb-3 rounded">
+								<i class="bi bi-calendar2-check"></i>
+							</div>
+							<h6 class="text-accent">Project Overview</h6>
+							<p>
+								Con Scheduler is an event scheduling web app built for MavScript Con, a fan convention.
+								Users can browse, plan, and manage panel sessions across a dynamic interactive schedule.
+							</p>
+							<h6 class="text-accent mt-3">Key Features</h6>
+							<ul>
+								<li>Dynamic event and panel scheduling UI</li>
+								<li>Interactive session browsing and planning</li>
+								<li>Responsive layout for all screen sizes</li>
+								<li>Deployed on GitHub Pages</li>
+							</ul>
+							<h6 class="text-accent mt-3">Technologies Used</h6>
+							<div class="d-flex flex-wrap gap-1">
+								<span class="badge bg-accent-soft">JavaScript</span>
+								<span class="badge bg-accent-soft">HTML</span>
+								<span class="badge bg-accent-soft">CSS</span>
+							</div>
+						</div>
+						<div class="modal-footer border-secondary">
+							<a
+								href="https://github.com/MavScriptBlu/MavScript-con-scheduler"
+								target="_blank"
+								class="btn btn-outline-light"
+								><i class="bi bi-github me-1"></i>GitHub</a
+							>
+							<a
+								href="https://mavscriptblu.github.io/MavScript-con-scheduler/"
+								target="_blank"
+								class="btn btn-accent"
+								><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal: TheaterOOP -->
+			<div
+				class="modal fade"
+				id="modalTheater"
+				tabindex="-1"
+				aria-labelledby="modalTheaterLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content bg-dark text-light">
+						<div class="modal-header border-secondary">
+							<h5 class="modal-title" id="modalTheaterLabel">TheaterOOP</h5>
+							<button
+								type="button"
+								class="btn-close btn-close-white"
+								data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div
+								class="project-modal-thumbnail project-gradient-theater mb-3 rounded">
+								<i class="bi bi-masks-theater"></i>
+							</div>
+							<h6 class="text-accent">Project Overview</h6>
+							<p>
+								TheaterOOP is a C# console application that simulates managing a theater &mdash;
+								handling seat reservations, show scheduling, and ticket sales using clean OOP design principles.
+							</p>
+							<h6 class="text-accent mt-3">Key Features</h6>
+							<ul>
+								<li>Seat selection and reservation system</li>
+								<li>Show scheduling and management</li>
+								<li>Ticket handling with OOP design patterns</li>
+								<li>Clean class hierarchy and separation of concerns</li>
+							</ul>
+							<h6 class="text-accent mt-3">Technologies Used</h6>
+							<div class="d-flex flex-wrap gap-1">
+								<span class="badge bg-accent-soft">C#</span>
+								<span class="badge bg-accent-soft">OOP</span>
+								<span class="badge bg-accent-soft">.NET</span>
+							</div>
+						</div>
+						<div class="modal-footer border-secondary">
+							<a
+								href="https://github.com/MavScriptBlu/TheaterOOP"
+								target="_blank"
+								class="btn btn-outline-light"
+								><i class="bi bi-github me-1"></i>GitHub</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal: Dream of Ru -->
+			<div
+				class="modal fade"
+				id="modalDreamru"
+				tabindex="-1"
+				aria-labelledby="modalDreamruLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content bg-dark text-light">
+						<div class="modal-header border-secondary">
+							<h5 class="modal-title" id="modalDreamruLabel">Dream of Ru</h5>
+							<button
+								type="button"
+								class="btn-close btn-close-white"
+								data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div
+								class="project-modal-thumbnail project-gradient-dreamru mb-3 rounded">
+								<i class="bi bi-moon-stars"></i>
+							</div>
+							<h6 class="text-accent">Project Overview</h6>
+							<p>
+								Dream of Ru is a creative web experience that blends JavaScript interactivity with visual
+								storytelling. An imaginative project exploring what's possible when code meets creative expression.
+							</p>
+							<h6 class="text-accent mt-3">Key Features</h6>
+							<ul>
+								<li>Interactive visual experience</li>
+								<li>Creative JavaScript-driven animations</li>
+								<li>Responsive and accessible design</li>
+								<li>Deployed on GitHub Pages</li>
+							</ul>
+							<h6 class="text-accent mt-3">Technologies Used</h6>
+							<div class="d-flex flex-wrap gap-1">
+								<span class="badge bg-accent-soft">JavaScript</span>
+								<span class="badge bg-accent-soft">HTML</span>
+								<span class="badge bg-accent-soft">CSS</span>
+							</div>
+						</div>
+						<div class="modal-footer border-secondary">
+							<a
+								href="https://github.com/MavScriptBlu/Dream-of-Ru"
+								target="_blank"
+								class="btn btn-outline-light"
+								><i class="bi bi-github me-1"></i>GitHub</a
+							>
+							<a
+								href="https://mavscriptblu.github.io/Dream-of-Ru/"
+								target="_blank"
+								class="btn btn-accent"
+								><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- ============================================================
        Stats Section (jQuery animated counters)
        ============================================================ -->
@@ -1156,7 +1452,7 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-folder text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="47">
+								<h2 class="stat-number text-white fw-bold" data-target="57">
 									0
 								</h2>
 								<p class="text-muted mb-0">GitHub Repositories</p>
@@ -1165,7 +1461,7 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-code-slash text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="6">
+								<h2 class="stat-number text-white fw-bold" data-target="7">
 									0
 								</h2>
 								<p class="text-muted mb-0">Languages Used</p>
@@ -1174,7 +1470,7 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-globe text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="8">
+								<h2 class="stat-number text-white fw-bold" data-target="15">
 									0
 								</h2>
 								<p class="text-muted mb-0">Live Deployed Apps</p>

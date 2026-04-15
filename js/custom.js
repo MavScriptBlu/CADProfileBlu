@@ -246,23 +246,16 @@ $(document).ready(function () {
 
     var filter = $(this).data('filter');
 
-    if (filter === 'all') {
-      $('.portfolio-item').removeClass('hide').addClass('show');
-      // Restore normal flow
-      setTimeout(function () {
-        $('.portfolio-item').css('position', '');
-      }, 400);
-    } else {
-      // Hide non-matching items
-      $('.portfolio-item').each(function () {
-        var category = $(this).data('category');
-        if (category === filter) {
-          $(this).removeClass('hide').addClass('show').css('position', '');
-        } else {
-          $(this).removeClass('show').addClass('hide');
-        }
-      });
-    }
+    $('.portfolio-item').each(function () {
+      var $item = $(this);
+      var category = $item.data('category');
+
+      if (filter === 'all' || category === filter) {
+        $item.stop(true).fadeIn(350);
+      } else {
+        $item.stop(true).fadeOut(280);
+      }
+    });
   });
 
 
