@@ -408,7 +408,7 @@ body {
 .project-gradient-pixelboof {
 	background: linear-gradient(135deg, #667eea, #764ba2);
 }
-.project-gradient-wtwr {
+.project-gradient-bot {
 	background: linear-gradient(135deg, #f093fb, #f5576c);
 }
 .project-gradient-dnd {
@@ -417,17 +417,11 @@ body {
 .project-gradient-overlays {
 	background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
-.project-gradient-spots {
-	background: linear-gradient(135deg, #fa709a, #fee140);
-}
 .project-gradient-golfscorer {
 	background: linear-gradient(135deg, #a18cd1, #fbc2eb);
 }
 .project-gradient-scheduler {
 	background: linear-gradient(135deg, #f7971e, #ffd200);
-}
-.project-gradient-theater {
-	background: linear-gradient(135deg, #c471ed, #f64f59);
 }
 .project-gradient-dreamru {
 	background: linear-gradient(135deg, #0f3443, #34e89e);

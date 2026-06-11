@@ -180,12 +180,40 @@ $(document).ready(function () {
      - Counts up from 0 to the target number
      - Triggers when the stats section enters the viewport
      - Runs only once
+     - Stats are pulled live from the GitHub API on load
      ============================================================ */
+
+  var GITHUB_USERNAME = 'MavScriptBlu';
+
+  // "Cups of Coffee" is just for fun - randomize a high number on each load
+  $('#statCoffee').attr('data-target', Math.floor(Math.random() * 900) + 100);
+
+  // Fetch live stats from GitHub: repo count, distinct languages, repos with a live homepage
+  var statsDataReady = false;
+
+  $.getJSON('https://api.github.com/users/' + GITHUB_USERNAME + '/repos?per_page=100&type=owner')
+    .done(function (repos) {
+      var languages = new Set();
+      var liveApps = 0;
+
+      repos.forEach(function (repo) {
+        if (repo.language) languages.add(repo.language);
+        if (repo.homepage && repo.homepage.trim() !== '') liveApps++;
+      });
+
+      $('#statRepos').attr('data-target', repos.length);
+      $('#statLanguages').attr('data-target', languages.size);
+      $('#statLiveApps').attr('data-target', liveApps);
+    })
+    .always(function () {
+      statsDataReady = true;
+      animateCounters();
+    });
 
   var countersAnimated = false;
 
   function animateCounters() {
-    if (countersAnimated) return;
+    if (countersAnimated || !statsDataReady) return;
 
     var statsSection = $('#stats');
     if (!statsSection.length) return;

@@ -602,37 +602,38 @@
 							</div>
 						</div>
 
-						<!-- Project 2: WTWR -->
+						<!-- Project 2: MavScript Bot -->
 						<div
 							class="col-md-6 col-lg-4 portfolio-item fade-in"
 							data-category="fullstack">
 							<div class="card project-card h-100">
 								<div
-									class="card-img-top project-card-thumbnail project-gradient-wtwr">
-									<i class="bi bi-cloud-sun"></i>
+									class="card-img-top project-card-thumbnail project-gradient-bot">
+									<i class="bi bi-robot"></i>
 								</div>
 								<div class="card-body">
 									<div
 										class="d-flex justify-content-between align-items-start mb-2">
-										<h5 class="card-title mb-0">WTWR (What to Wear)</h5>
+										<h5 class="card-title mb-0">MavScript Bot</h5>
 										<span class="badge bg-accent-soft">Full-Stack</span>
 									</div>
 									<p class="card-text text-muted">
-										A full-stack React application with an Express backend that
-										suggests what to wear based on the current weather.
+										A multi-tenant Twitch chat bot &amp; streamer toolkit with AI
+										chat, OBS overlays, song requests, and a real-time dashboard
+										&mdash; running 24/7 for dozens of channels.
 									</p>
 									<div class="d-flex flex-wrap gap-1 mb-3">
-										<small class="badge bg-dark">React</small>
 										<small class="badge bg-dark">Node.js</small>
 										<small class="badge bg-dark">Express</small>
-										<small class="badge bg-dark">Vercel</small>
+										<small class="badge bg-dark">MongoDB</small>
+										<small class="badge bg-dark">Gemini AI</small>
 									</div>
 								</div>
 								<div class="card-footer bg-transparent border-0 pb-3">
 									<button
 										class="btn btn-sm btn-accent"
 										data-bs-toggle="modal"
-										data-bs-target="#modalWtwr">
+										data-bs-target="#modalBot">
 										View Details <i class="bi bi-arrow-right"></i>
 									</button>
 								</div>
@@ -710,42 +711,6 @@
 							</div>
 						</div>
 
-						<!-- Project 5: Spots -->
-						<div
-							class="col-md-6 col-lg-4 portfolio-item fade-in"
-							data-category="frontend">
-							<div class="card project-card h-100">
-								<div
-									class="card-img-top project-card-thumbnail project-gradient-spots">
-									<i class="bi bi-image"></i>
-								</div>
-								<div class="card-body">
-									<div
-										class="d-flex justify-content-between align-items-start mb-2">
-										<h5 class="card-title mb-0">Spots</h5>
-										<span class="badge bg-accent-soft">Frontend</span>
-									</div>
-									<p class="card-text text-muted">
-										An interactive web application for sharing and discovering
-										interesting spots and locations with a clean, card-based UI.
-									</p>
-									<div class="d-flex flex-wrap gap-1 mb-3">
-										<small class="badge bg-dark">JavaScript</small>
-										<small class="badge bg-dark">HTML</small>
-										<small class="badge bg-dark">CSS</small>
-									</div>
-								</div>
-								<div class="card-footer bg-transparent border-0 pb-3">
-									<button
-										class="btn btn-sm btn-accent"
-										data-bs-toggle="modal"
-										data-bs-target="#modalSpots">
-										View Details <i class="bi bi-arrow-right"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
 						<!-- Project 6: GolfScorer -->
 						<div
 							class="col-md-6 col-lg-4 portfolio-item fade-in"
@@ -811,41 +776,6 @@
 									class="btn btn-sm btn-accent"
 									data-bs-toggle="modal"
 									data-bs-target="#modalScheduler">
-									View Details <i class="bi bi-arrow-right"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 8: TheaterOOP -->
-					<div
-						class="col-md-6 col-lg-4 portfolio-item fade-in"
-						data-category="tools">
-						<div class="card project-card h-100">
-							<div
-								class="card-img-top project-card-thumbnail project-gradient-theater">
-								<i class="bi bi-masks-theater"></i>
-							</div>
-							<div class="card-body">
-								<div
-									class="d-flex justify-content-between align-items-start mb-2">
-									<h5 class="card-title mb-0">TheaterOOP</h5>
-									<span class="badge bg-accent-soft">Tools</span>
-								</div>
-								<p class="card-text text-muted">
-									A C# object-oriented application simulating theater management &mdash; seats, shows, and ticket handling built with clean OOP architecture.
-								</p>
-								<div class="d-flex flex-wrap gap-1 mb-3">
-									<small class="badge bg-dark">C#</small>
-									<small class="badge bg-dark">OOP</small>
-									<small class="badge bg-dark">.NET</small>
-								</div>
-							</div>
-							<div class="card-footer bg-transparent border-0 pb-3">
-								<button
-									class="btn btn-sm btn-accent"
-									data-bs-toggle="modal"
-									data-bs-target="#modalTheater">
 									View Details <i class="bi bi-arrow-right"></i>
 								</button>
 							</div>
@@ -954,19 +884,17 @@
 				</div>
 			</div>
 
-			<!-- Modal: WTWR -->
+			<!-- Modal: MavScript Bot -->
 			<div
 				class="modal fade"
-				id="modalWtwr"
+				id="modalBot"
 				tabindex="-1"
-				aria-labelledby="modalWtwrLabel"
+				aria-labelledby="modalBotLabel"
 				aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered">
 					<div class="modal-content bg-dark text-light">
 						<div class="modal-header border-secondary">
-							<h5 class="modal-title" id="modalWtwrLabel">
-								WTWR (What to Wear)
-							</h5>
+							<h5 class="modal-title" id="modalBotLabel">MavScript Bot</h5>
 							<button
 								type="button"
 								class="btn-close btn-close-white"
@@ -975,52 +903,60 @@
 						</div>
 						<div class="modal-body">
 							<div
-								class="project-modal-thumbnail project-gradient-wtwr mb-3 rounded">
-								<i class="bi bi-cloud-sun"></i>
+								class="project-modal-thumbnail project-gradient-bot mb-3 rounded">
+								<i class="bi bi-robot"></i>
 							</div>
 							<h6 class="text-accent">Project Overview</h6>
 							<p>
-								WTWR is a full-stack web application that helps users decide
-								what to wear based on current weather conditions. The React
-								frontend fetches weather data and presents clothing suggestions,
-								while the Express backend handles user data, authentication, and
-								clothing item management.
+								A multi-tenant Twitch chat bot and streamer toolkit, built as a
+								SaaS-style subscription service via Patreon. Streamers authorize
+								the bot for their channel and get automated moderation,
+								AI-powered chat features, OBS overlays, and a private real-time
+								dashboard &mdash; all running 24/7 from a single Node.js backend
+								serving dozens of channels simultaneously. The bot also runs its
+								own live Twitch channel 24/7 with an AI co-host narrating network
+								activity.
 							</p>
 							<h6 class="text-accent mt-3">Key Features</h6>
 							<ul>
-								<li>Real-time weather data integration</li>
-								<li>Clothing suggestions based on temperature</li>
-								<li>User accounts with authentication</li>
-								<li>Add, edit, and manage clothing items</li>
-								<li>Responsive UI built with React</li>
+								<li>
+									Automated moderation &mdash; spam/promo detection, auto-bans,
+									auto-shoutouts for first-time chatters
+								</li>
+								<li>
+									AI chat assistant (<code>!ask</code>) with natural-language
+									recurring/one-time reminders
+								</li>
+								<li>No-code recurring chat timers (StreamElements/Nightbot-style)</li>
+								<li>YouTube song request queue with live OBS "Now Playing" overlay</li>
+								<li>Real-time follow/sub/raid alert overlays + animated emote rain</li>
+								<li>Live chat polls with a customizable on-stream results overlay</li>
+								<li>No-code custom command builder per channel</li>
+								<li>Private streamer dashboard &mdash; live chat, queue, timers, viewers, settings</li>
+								<li>Automatic "stream vibe" detection that flavors bot responses</li>
+								<li>Full Discord community suite &mdash; welcome/leave, auto-roles, leveling, giveaways, birthdays, moderation, AI support channel</li>
+								<li>The bot streams itself 24/7 with an AI co-host and live network stats</li>
 							</ul>
 							<h6 class="text-accent mt-3">Technologies Used</h6>
 							<div class="d-flex flex-wrap gap-1">
-								<span class="badge bg-accent-soft">React</span>
 								<span class="badge bg-accent-soft">Node.js</span>
 								<span class="badge bg-accent-soft">Express</span>
-								<span class="badge bg-accent-soft">Vercel</span>
-								<span class="badge bg-accent-soft">REST API</span>
+								<span class="badge bg-accent-soft">MongoDB</span>
+								<span class="badge bg-accent-soft">Google Gemini</span>
+								<span class="badge bg-accent-soft">Twitch API / EventSub</span>
+								<span class="badge bg-accent-soft">Discord.js</span>
+								<span class="badge bg-accent-soft">YouTube Data API</span>
+								<span class="badge bg-accent-soft">Server-Sent Events</span>
+								<span class="badge bg-accent-soft">Electron</span>
 							</div>
 						</div>
 						<div class="modal-footer border-secondary">
 							<a
-								href="https://github.com/MavScriptBlu/se_project_react"
+								href="https://bot.mavscript.dev"
 								target="_blank"
-								class="btn btn-outline-light"
-								><i class="bi bi-github me-1"></i>Frontend Repo</a
-							>
-							<a
-								href="https://github.com/MavScriptBlu/se_project_express"
-								target="_blank"
-								class="btn btn-outline-light"
-								><i class="bi bi-github me-1"></i>Backend Repo</a
-							>
-							<a
-								href="https://se-project-react-silk.vercel.app"
-								target="_blank"
+								rel="noopener noreferrer"
 								class="btn btn-accent"
-								><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a
+								><i class="bi bi-box-arrow-up-right me-1"></i>Visit Site</a
 							>
 						</div>
 					</div>
@@ -1150,68 +1086,6 @@
 				</div>
 			</div>
 
-			<!-- Modal: Spots -->
-			<div
-				class="modal fade"
-				id="modalSpots"
-				tabindex="-1"
-				aria-labelledby="modalSpotsLabel"
-				aria-hidden="true">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content bg-dark text-light">
-						<div class="modal-header border-secondary">
-							<h5 class="modal-title" id="modalSpotsLabel">Spots</h5>
-							<button
-								type="button"
-								class="btn-close btn-close-white"
-								data-bs-dismiss="modal"
-								aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div
-								class="project-modal-thumbnail project-gradient-spots mb-3 rounded">
-								<i class="bi bi-image"></i>
-							</div>
-							<h6 class="text-accent">Project Overview</h6>
-							<p>
-								Spots is an interactive web application for sharing and
-								discovering interesting locations. Users can browse spot cards,
-								view details, and interact with the content through a clean,
-								intuitive card-based interface.
-							</p>
-							<h6 class="text-accent mt-3">Key Features</h6>
-							<ul>
-								<li>Card-based UI for browsing spots</li>
-								<li>Interactive like and share functionality</li>
-								<li>Responsive layout for all screen sizes</li>
-								<li>Clean, modern design</li>
-							</ul>
-							<h6 class="text-accent mt-3">Technologies Used</h6>
-							<div class="d-flex flex-wrap gap-1">
-								<span class="badge bg-accent-soft">JavaScript</span>
-								<span class="badge bg-accent-soft">HTML</span>
-								<span class="badge bg-accent-soft">CSS</span>
-							</div>
-						</div>
-						<div class="modal-footer border-secondary">
-							<a
-								href="https://github.com/MavScriptBlu/se_project_spots"
-								target="_blank"
-								class="btn btn-outline-light"
-								><i class="bi bi-github me-1"></i>GitHub</a
-							>
-							<a
-								href="https://mavscriptblu.github.io/se_project_spots/"
-								rel="noopener"
-								target="_blank"
-								class="btn btn-accent"
-								><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<!-- Modal: GolfScorer -->
 			<div
 				class="modal fade"
@@ -1329,60 +1203,6 @@
 				</div>
 			</div>
 
-			<!-- Modal: TheaterOOP -->
-			<div
-				class="modal fade"
-				id="modalTheater"
-				tabindex="-1"
-				aria-labelledby="modalTheaterLabel"
-				aria-hidden="true">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content bg-dark text-light">
-						<div class="modal-header border-secondary">
-							<h5 class="modal-title" id="modalTheaterLabel">TheaterOOP</h5>
-							<button
-								type="button"
-								class="btn-close btn-close-white"
-								data-bs-dismiss="modal"
-								aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div
-								class="project-modal-thumbnail project-gradient-theater mb-3 rounded">
-								<i class="bi bi-masks-theater"></i>
-							</div>
-							<h6 class="text-accent">Project Overview</h6>
-							<p>
-								TheaterOOP is a C# console application that simulates managing a theater &mdash;
-								handling seat reservations, show scheduling, and ticket sales using clean OOP design principles.
-							</p>
-							<h6 class="text-accent mt-3">Key Features</h6>
-							<ul>
-								<li>Seat selection and reservation system</li>
-								<li>Show scheduling and management</li>
-								<li>Ticket handling with OOP design patterns</li>
-								<li>Clean class hierarchy and separation of concerns</li>
-							</ul>
-							<h6 class="text-accent mt-3">Technologies Used</h6>
-							<div class="d-flex flex-wrap gap-1">
-								<span class="badge bg-accent-soft">C#</span>
-								<span class="badge bg-accent-soft">OOP</span>
-								<span class="badge bg-accent-soft">.NET</span>
-							</div>
-						</div>
-						<div class="modal-footer border-secondary">
-							<a
-								href="https://github.com/MavScriptBlu/TheaterOOP"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn btn-outline-light"
-								><i class="bi bi-github me-1"></i>GitHub</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<!-- Modal: Dream of Ru -->
 			<div
 				class="modal fade"
@@ -1456,7 +1276,10 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-folder text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="57">
+								<h2
+									id="statRepos"
+									class="stat-number text-white fw-bold"
+									data-target="0">
 									0
 								</h2>
 								<p class="text-muted mb-0">GitHub Repositories</p>
@@ -1465,7 +1288,10 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-code-slash text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="7">
+								<h2
+									id="statLanguages"
+									class="stat-number text-white fw-bold"
+									data-target="0">
 									0
 								</h2>
 								<p class="text-muted mb-0">Languages Used</p>
@@ -1474,7 +1300,10 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-globe text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="15">
+								<h2
+									id="statLiveApps"
+									class="stat-number text-white fw-bold"
+									data-target="0">
 									0
 								</h2>
 								<p class="text-muted mb-0">Live Deployed Apps</p>
@@ -1483,7 +1312,10 @@
 						<div class="col-6 col-md-3 fade-in">
 							<div class="stat-item">
 								<i class="bi bi-cup-hot text-accent fs-2 mb-2 d-block"></i>
-								<h2 class="stat-number text-white fw-bold" data-target="1000">
+								<h2
+									id="statCoffee"
+									class="stat-number text-white fw-bold"
+									data-target="0">
 									0
 								</h2>
 								<p class="text-muted mb-0">Cups of Coffee</p>
