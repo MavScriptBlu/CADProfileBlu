@@ -219,13 +219,28 @@ $(document).ready(function () {
     }
   }
 
+  // Follow the Link header to fetch every page of repos (GitHub caps per_page at 100)
+  function fetchAllRepos(url, accumulated) {
+    accumulated = accumulated || [];
+    return $.ajax({ url: url, dataType: 'json' }).then(function (data, textStatus, jqXHR) {
+      accumulated = accumulated.concat(data);
+
+      var link = jqXHR.getResponseHeader('Link');
+      var nextMatch = link && link.match(/<([^>]+)>;\s*rel="next"/);
+      if (nextMatch) {
+        return fetchAllRepos(nextMatch[1], accumulated);
+      }
+      return accumulated;
+    });
+  }
+
   var cachedStats = readStatsCache();
   if (cachedStats) {
     applyGitHubStats(cachedStats);
     statsDataReady = true;
     animateCounters();
   } else {
-    $.getJSON('https://api.github.com/users/' + GITHUB_USERNAME + '/repos?per_page=100&type=owner')
+    fetchAllRepos('https://api.github.com/users/' + GITHUB_USERNAME + '/repos?per_page=100&type=owner')
       .done(function (repos) {
         var languages = new Set();
         var liveApps = 0;
