@@ -180,12 +180,99 @@ $(document).ready(function () {
      - Counts up from 0 to the target number
      - Triggers when the stats section enters the viewport
      - Runs only once
+     - Stats are pulled live from the GitHub API on load
      ============================================================ */
+
+  var GITHUB_USERNAME = 'MavScriptBlu';
+  var STATS_CACHE_KEY = 'github_stats_' + GITHUB_USERNAME;
+  var STATS_CACHE_TTL = 3600000; // 1 hour
+
+  // "Cups of Coffee" is just for fun - randomize a high number on each load
+  $('#statCoffee').attr('data-target', Math.floor(Math.random() * 900) + 100);
+
+  // Fetch live stats from GitHub: repo count, distinct languages, repos with a live homepage
+  var statsDataReady = false;
+
+  function applyGitHubStats(stats) {
+    $('#statRepos').attr('data-target', stats.repos);
+    $('#statLanguages').attr('data-target', stats.languages);
+    $('#statLiveApps').attr('data-target', stats.liveApps);
+  }
+
+  function readStatsCache() {
+    try {
+      var cached = JSON.parse(localStorage.getItem(STATS_CACHE_KEY));
+      if (cached && (Date.now() - cached.timestamp < STATS_CACHE_TTL)) {
+        return cached;
+      }
+    } catch (e) {
+      // Ignore malformed/unavailable localStorage
+    }
+    return null;
+  }
+
+  function writeStatsCache(stats) {
+    try {
+      localStorage.setItem(STATS_CACHE_KEY, JSON.stringify(stats));
+    } catch (e) {
+      // Ignore unavailable localStorage (e.g. private browsing)
+    }
+  }
+
+  // Follow the Link header to fetch every page of repos (GitHub caps per_page at 100)
+  function fetchAllRepos(url, accumulated) {
+    accumulated = accumulated || [];
+    return $.ajax({ url: url, dataType: 'json' }).then(function (data, textStatus, jqXHR) {
+      accumulated = accumulated.concat(data);
+
+      var link = jqXHR.getResponseHeader('Link');
+      var nextMatch = link && link.match(/<([^>]+)>;\s*rel="next"/);
+      if (nextMatch) {
+        return fetchAllRepos(nextMatch[1], accumulated);
+      }
+      return accumulated;
+    });
+  }
+
+  var cachedStats = readStatsCache();
+  if (cachedStats) {
+    applyGitHubStats(cachedStats);
+    statsDataReady = true;
+    animateCounters();
+  } else {
+    fetchAllRepos('https://api.github.com/users/' + GITHUB_USERNAME + '/repos?per_page=100&type=owner')
+      .done(function (repos) {
+        var languages = new Set();
+        var liveApps = 0;
+
+        repos.forEach(function (repo) {
+          if (repo.language) languages.add(repo.language);
+          if (repo.homepage && repo.homepage.trim() !== '') liveApps++;
+        });
+
+        var stats = {
+          repos: repos.length,
+          languages: languages.size,
+          liveApps: liveApps,
+          timestamp: Date.now()
+        };
+
+        writeStatsCache(stats);
+        applyGitHubStats(stats);
+      })
+      .fail(function () {
+        // Keep the fallback values already in the markup
+      })
+      .always(function () {
+        statsDataReady = true;
+        animateCounters();
+      });
+  }
 
   var countersAnimated = false;
 
   function animateCounters() {
-    if (countersAnimated) return;
+    if (countersAnimated || !statsDataReady) return;
 
     var statsSection = $('#stats');
     if (!statsSection.length) return;
